@@ -6,7 +6,7 @@ public class TileMakeScript : MonoBehaviour {
 	public GameObject waterTile;
 	public GameObject grassTile;
 	public GameObject hillTile;
-
+	public GameObject[,] tileArray = new GameObject[20,20];
 
 	// Use this for initialization
 	void Start () {
