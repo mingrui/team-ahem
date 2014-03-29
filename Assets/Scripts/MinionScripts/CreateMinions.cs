@@ -9,39 +9,30 @@ public class CreateMinions : MonoBehaviour {
 	public GameObject purpleMinion1;
 	public GameObject purpleMinion2;
 	public GameObject purpleMinion3;
-	
-	public float[] startPos1 = new float[] {-9.5f, 3f, -9.5f};
-	public float[] startPos2 = new float[] {-9.5f, 3f, -8.5f};
-	public float[] startPos3 = new float[] {-9.5f, 3f, -7.5f};
 
-	GameObject ym;
+	private Vector3 startPos1 = new Vector3(-9.5f, 3, -9.5f);
+	private Vector3 startPos2 = new Vector3(-9.5f, 3, -8.5f);
+	private Vector3 startPos3 = new Vector3(-9.5f, 3, -7.5f);
 
-	void startHelper(float[] pos, GameObject o) {
-		ym = Instantiate(o, new Vector3(pos[0], pos[1], pos[2]), Quaternion.identity) as GameObject;
+	private Vector3 startPos4 = new Vector3(9.5f, 3, 9.5f);
+	private Vector3 startPos5 = new Vector3(9.5f, 3, 8.5f);
+	private Vector3 startPos6 = new Vector3(9.5f, 3, 7.5f);
+
+	void startHelper(Vector3 pos, GameObject o) {
+		GameObject ym = Instantiate(o, pos, Quaternion.identity) as GameObject;
 		ym.transform.Rotate(0f, 0f, 180f);
 	}
-	
+
+
 	// Use this for initialization
 	void Start () {
-	
-		ym = Instantiate(yellowMinion1, new Vector3(-9.5f, 3f, -9.5f), Quaternion.identity) as GameObject;
-		ym.transform.Rotate(0f, 0f, 180f);
 
-		ym = Instantiate(yellowMinion2, new Vector3(-9.5f, 3f, -8.5f), Quaternion.identity) as GameObject;
-		ym.transform.Rotate(0f, 0f, 180f);
-
-		ym = Instantiate(yellowMinion1, new Vector3(-9.5f, 3f, -7.5f), Quaternion.identity) as GameObject;
-		ym.transform.Rotate(0f, 0f, 180f);
-
-		ym = Instantiate(yellowMinion1, new Vector3(9.5f, 3f, 9.5f), Quaternion.identity) as GameObject;
-		ym.transform.Rotate(0f, 0f, 180f);
-		
-		ym = Instantiate(yellowMinion2, new Vector3(9.5f, 3f, 8.5f), Quaternion.identity) as GameObject;
-		ym.transform.Rotate(0f, 0f, 180f);
-		
-		ym = Instantiate(yellowMinion1, new Vector3(9.5f, 3f, 7.5f), Quaternion.identity) as GameObject;
-		ym.transform.Rotate(0f, 0f, 180f);
-
+		startHelper(startPos1, yellowMinion1);
+		startHelper(startPos2, yellowMinion2);
+		startHelper(startPos3, yellowMinion1);
+		startHelper(startPos4, yellowMinion2);
+		startHelper(startPos5, yellowMinion1);
+		startHelper(startPos6, yellowMinion2);
 
 	}
 	
