@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-ususing UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class TileMakeScript : MonoBehaviour {

@@ -9,20 +9,40 @@ public class CreateMinions : MonoBehaviour {
 	public GameObject purpleMinion1;
 	public GameObject purpleMinion2;
 	public GameObject purpleMinion3;
+	
+	public float[] startPos1 = new float[] {-9.5f, 3f, -9.5f};
+	public float[] startPos2 = new float[] {-9.5f, 3f, -8.5f};
+	public float[] startPos3 = new float[] {-9.5f, 3f, -7.5f};
 
-	// first three postion is for yellowMinion 1, 2, 3 then purple mininon 1, 2, 3
-	public float[] startPos1 = new float[3] {-9.5f, 3f, -9.5f};
+	GameObject ym;
 
-	void Awake() {
-		Debug.Log(startPos1[1]);
+	void startHelper(float[] pos, GameObject o) {
+		ym = Instantiate(o, new Vector3(pos[0], pos[1], pos[2]), Quaternion.identity) as GameObject;
+		ym.transform.Rotate(0f, 0f, 180f);
 	}
-
+	
 	// Use this for initialization
 	void Start () {
+	
+		ym = Instantiate(yellowMinion1, new Vector3(-9.5f, 3f, -9.5f), Quaternion.identity) as GameObject;
+		ym.transform.Rotate(0f, 0f, 180f);
 
-		GameObject ym1 = Instantiate(yellowMinion1, new Vector3(startPos1[0], 3f, startPos1[2]), Quaternion.identity) as GameObject;
-		ym1.transform.Rotate(0f, 0f, 180f);
-		Debug.Log(startPos1[1]);
+		ym = Instantiate(yellowMinion2, new Vector3(-9.5f, 3f, -8.5f), Quaternion.identity) as GameObject;
+		ym.transform.Rotate(0f, 0f, 180f);
+
+		ym = Instantiate(yellowMinion1, new Vector3(-9.5f, 3f, -7.5f), Quaternion.identity) as GameObject;
+		ym.transform.Rotate(0f, 0f, 180f);
+
+		ym = Instantiate(yellowMinion1, new Vector3(9.5f, 3f, 9.5f), Quaternion.identity) as GameObject;
+		ym.transform.Rotate(0f, 0f, 180f);
+		
+		ym = Instantiate(yellowMinion2, new Vector3(9.5f, 3f, 8.5f), Quaternion.identity) as GameObject;
+		ym.transform.Rotate(0f, 0f, 180f);
+		
+		ym = Instantiate(yellowMinion1, new Vector3(9.5f, 3f, 7.5f), Quaternion.identity) as GameObject;
+		ym.transform.Rotate(0f, 0f, 180f);
+
+
 	}
 	
 	// Update is called once per frame
