@@ -185,78 +185,6 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_HDR: 0
   m_OcclusionCulling: 1
---- !u!1 &155739807
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100000, guid: 619a7506e102cf04cac5cadb536f1fee, type: 2}
-  m_PrefabInternal: {fileID: 1119642316}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 155739811}
-  - 33: {fileID: 155739810}
-  - 65: {fileID: 155739809}
-  - 23: {fileID: 155739808}
-  m_Layer: 0
-  m_Name: GrassCube
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!23 &155739808
-Renderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2300000, guid: 619a7506e102cf04cac5cadb536f1fee,
-    type: 2}
-  m_PrefabInternal: {fileID: 1119642316}
-  m_GameObject: {fileID: 155739807}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 2100000, guid: 7d9f48d25542df449a0f6069913bcc48, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortingLayerID: 0
---- !u!65 &155739809
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500000, guid: 619a7506e102cf04cac5cadb536f1fee,
-    type: 2}
-  m_PrefabInternal: {fileID: 1119642316}
-  m_GameObject: {fileID: 155739807}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &155739810
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3300000, guid: 619a7506e102cf04cac5cadb536f1fee,
-    type: 2}
-  m_PrefabInternal: {fileID: 1119642316}
-  m_GameObject: {fileID: 155739807}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &155739811
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400000, guid: 619a7506e102cf04cac5cadb536f1fee, type: 2}
-  m_PrefabInternal: {fileID: 1119642316}
-  m_GameObject: {fileID: 155739807}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .475045502, y: 1.70124054, z: -.471926928}
-  m_LocalScale: {x: .0500000007, y: 1, z: .0500000007}
-  m_Children: []
-  m_Father: {fileID: 1398183511}
 --- !u!1 &181086970
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,54 +512,6 @@ Prefab:
   m_RootGameObject: {fileID: 470431244}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!1001 &1119642316
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1398183511}
-    m_Modifications:
-    - target: {fileID: 400000, guid: 619a7506e102cf04cac5cadb536f1fee, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: .475045502
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 619a7506e102cf04cac5cadb536f1fee, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.70124054
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 619a7506e102cf04cac5cadb536f1fee, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -.471926928
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 619a7506e102cf04cac5cadb536f1fee, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 619a7506e102cf04cac5cadb536f1fee, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 619a7506e102cf04cac5cadb536f1fee, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 619a7506e102cf04cac5cadb536f1fee, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 619a7506e102cf04cac5cadb536f1fee, type: 2}
-      propertyPath: m_LocalScale.x
-      value: .0500000007
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 619a7506e102cf04cac5cadb536f1fee, type: 2}
-      propertyPath: m_LocalScale.z
-      value: .0500000007
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 619a7506e102cf04cac5cadb536f1fee, type: 2}
-  m_RootGameObject: {fileID: 155739807}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1 &1130832280
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,8 +520,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1130832281}
+  - 114: {fileID: 1130832282}
   m_Layer: 0
-  m_Name: Tiles
+  m_Name: MapInstantiate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -654,10 +535,24 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1130832280}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.85749865, y: 6.26169729, z: -7.24210453}
+  m_LocalPosition: {x: -9.5, y: 0, z: -9.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &1130832282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1130832280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 650984607e252df46b4d52185e868817, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grassTile: {fileID: 100000, guid: 619a7506e102cf04cac5cadb536f1fee, type: 2}
+  hillTile: {fileID: 100000, guid: 31c743bdb87fe874a859d5d60ea3af29, type: 2}
+  waterTile: {fileID: 100000, guid: 82d9ce0f0e494734cb729adf62b98f7a, type: 2}
 --- !u!1 &1398183507
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,7 +564,6 @@ GameObject:
   - 33: {fileID: 1398183510}
   - 65: {fileID: 1398183509}
   - 23: {fileID: 1398183508}
-  - 114: {fileID: 1398183512}
   m_Layer: 0
   m_Name: Board
   m_TagString: Untagged
@@ -726,23 +620,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 20, y: 1, z: 20}
-  m_Children:
-  - {fileID: 155739811}
+  m_Children: []
   m_Father: {fileID: 0}
---- !u!114 &1398183512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1398183507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 650984607e252df46b4d52185e868817, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waterTile: {fileID: 100000, guid: 82d9ce0f0e494734cb729adf62b98f7a, type: 2}
-  grassTile: {fileID: 100000, guid: 619a7506e102cf04cac5cadb536f1fee, type: 2}
-  hillTile: {fileID: 100000, guid: 31c743bdb87fe874a859d5d60ea3af29, type: 2}
 --- !u!1 &1454029776
 GameObject:
   m_ObjectHideFlags: 0
