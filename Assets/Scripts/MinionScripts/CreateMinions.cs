@@ -3,12 +3,12 @@ using System.Collections;
 
 public class CreateMinions : MonoBehaviour {
 
-	public GameObject yellowMinion1;
-	public GameObject yellowMinion2;
-	public GameObject yellowMinion3;
-	public GameObject purpleMinion1;
-	public GameObject purpleMinion2;
-	public GameObject purpleMinion3;
+	public GameObject yellowMelee;
+	public GameObject yellowRange;
+	public GameObject yellowDefense;
+	public GameObject purpleMelee;
+	public GameObject purpleRange;
+	public GameObject purpleDefense;
 
 	private Vector3 startPos1 = new Vector3(-9.5f, 3, -9.5f);
 	private Vector3 startPos2 = new Vector3(-9.5f, 3, -8.5f);
@@ -18,22 +18,20 @@ public class CreateMinions : MonoBehaviour {
 	private Vector3 startPos5 = new Vector3(9.5f, 3, 8.5f);
 	private Vector3 startPos6 = new Vector3(9.5f, 3, 7.5f);
 
-	void startHelper(Vector3 pos, GameObject o) {
-		GameObject ym = Instantiate(o, pos, Quaternion.identity) as GameObject;
+	void startHelper(Vector3 pos, GameObject obj) {
+		GameObject ym = Instantiate(obj, pos, Quaternion.identity) as GameObject;
+
 		ym.transform.Rotate(0f, 0f, 180f);
 	}
-
-
+	
 	// Use this for initialization
 	void Start () {
-
-		startHelper(startPos1, yellowMinion1);
-		startHelper(startPos2, yellowMinion2);
-		startHelper(startPos3, yellowMinion1);
-		startHelper(startPos4, yellowMinion2);
-		startHelper(startPos5, yellowMinion1);
-		startHelper(startPos6, yellowMinion2);
-
+		startHelper(startPos1, yellowMelee);
+		startHelper(startPos2, yellowMelee);
+		startHelper(startPos3, yellowRange);
+		startHelper(startPos4, yellowMelee);
+		startHelper(startPos5, yellowRange);
+		startHelper(startPos6, yellowRange);
 	}
 	
 	// Update is called once per frame

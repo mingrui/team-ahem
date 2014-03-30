@@ -3,12 +3,12 @@ guid: 267b54e5f2b214677870cb498cc3ce4d
 MonoImporter:
   serializedVersion: 2
   defaultReferences:
-  - yellowMinion1: {fileID: 100000, guid: 0d00264ecfdcf44f585c66aa26def905, type: 2}
-  - yellowMinion2: {fileID: 100000, guid: 792dd95ebbb8e41079d858f856d1f027, type: 2}
-  - yellowMinion3: {instanceID: 0}
-  - purpleMinion1: {instanceID: 0}
-  - purpleMinion2: {instanceID: 0}
-  - purpleMinion3: {instanceID: 0}
+  - yellowMelee: {fileID: 100000, guid: 0d00264ecfdcf44f585c66aa26def905, type: 2}
+  - yellowRange: {fileID: 100000, guid: 792dd95ebbb8e41079d858f856d1f027, type: 2}
+  - yellowDefense: {instanceID: 0}
+  - purpleMelee: {instanceID: 0}
+  - purpleRange: {instanceID: 0}
+  - purpleDefense: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
