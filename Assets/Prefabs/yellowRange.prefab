@@ -13,7 +13,7 @@ GameObject:
   - 23: {fileID: 2300000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: GrassCube
+  m_Name: yellowRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,9 +25,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.50090981, y: 1.70124042, z: 1.468027}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: -1.62920685e-07}
+  m_LocalPosition: {x: -.390039653, y: 4.61936712, z: 1.7041564}
+  m_LocalScale: {x: .600000024, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!23 &2300000
@@ -42,7 +42,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 7d9f48d25542df449a0f6069913bcc48, type: 2}
+  - {fileID: 2100000, guid: a89d5b52ce9d945ee96d89fb7fce3fb7, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -78,9 +78,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d5e25ce963175d4d9035dd500cfa835, type: 3}
+  m_Script: {fileID: 11500000, guid: 666df3d9f2d184f3a9751c667c73ab65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 1
+  team: 0
+  attack: 20
+  movementRange: 3
+  health: 80
+  attackBonus: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
