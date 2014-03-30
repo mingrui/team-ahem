@@ -5,7 +5,9 @@ public class GlobalConst : MonoBehaviour {
 	
 	public enum MinionType {Melee, Range, Defensive};
 	public enum Team {Yellow, Purple};
-	public int[,] unitMap;
+	public static int[,] unitMap;
+	public static bool onMove = false;
+	public static GameObject selectedObj;
 	// unitMap to indicate unit grid position, 0 means no unit on that tile
 	// 1 means yellow minion, 2 means purple minion
 
@@ -30,5 +32,10 @@ public class GlobalConst : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
+	}
+
+	public static void Set_Position(Vector3 pos1, Vector3 pos2){
+		pos1.x = pos2.x;
+		pos1.z = pos2.z;
 	}
 }
