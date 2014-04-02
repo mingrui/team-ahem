@@ -5,6 +5,9 @@ public class GlobalConst : MonoBehaviour {
 	
 	public enum MinionType {Melee, Range, Defensive};
 	public enum Team {Yellow, Purple};
+	public enum Direction {
+		Left, Up, Right, Down
+	};
 	public static int[,] unitMap;
 	public static bool onMove = false;
 	public static GameObject selectedObj;
