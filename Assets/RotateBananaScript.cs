@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class sdasdas : MonoBehaviour {
+public class RotateBananaScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		transform.Rotate (0f, 0f, 180f);
 	
 	}
 	
