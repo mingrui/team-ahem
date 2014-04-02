@@ -49,6 +49,25 @@ public class MovementControl : MonoBehaviour {
 
 	// stop minion on collision with object
 	void OnCollisionEnter(Collision collision) {
+		Vector3 dir = collision.transform.position - transform.position;
+		
+		if(dir.z > 0.5){
+			transform.position = new Vector3(collision.transform.position.x, transform.position.y, collision.transform.position.z - 1);
+		}
+		else if(dir.z < -0.5){
+			Debug.Log("down");
+			transform.position = new Vector3(collision.transform.position.x, transform.position.y, collision.transform.position.z + 1);
+		}
+		else if(dir.x < -0.5){
+			Debug.Log("left");
+			transform.position = new Vector3(collision.transform.position.x + 1, transform.position.y, collision.transform.position.z);
+		}
+		else if(dir.x > 0.5){
+			Debug.Log("right");
+			transform.position = new Vector3(collision.transform.position.x - 1, transform.position.y, collision.transform.position.z);
+		}
+
+
 		rigidbody.velocity *= 0;
 	}
 

@@ -21,19 +21,19 @@ public class DirectionButton : MonoBehaviour {
 		Vector3 dir = transform.position - center.transform.position;
 
 		if(dir.z > 0.5){
-			Debug.Log("up");
+			//Debug.Log("up");
 			dir_enum = GlobalConst.Direction.Up;
 		}
 		else if(dir.z < -0.5){
-			Debug.Log("down");
+			//Debug.Log("down");
 			dir_enum = GlobalConst.Direction.Down;
 		}
 		else if(dir.x < -0.5){
-			Debug.Log("left");
+			//Debug.Log("left");
 			dir_enum = GlobalConst.Direction.Left;
 		}
 		else if(dir.x > 0.5){
-			Debug.Log("right");
+			//Debug.Log("right");
 			dir_enum = GlobalConst.Direction.Right;
 		}
 
