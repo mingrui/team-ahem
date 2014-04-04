@@ -109,4 +109,10 @@ public class MovementControl : MonoBehaviour {
 		dir_obj.GetComponent<DirectionMenu>().center = gameObject;
 		dir_obj.transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
 	}
+
+
+	void OnMouseEnter() {
+		
+		CursorScript.pos = new Vector3(gameObject.transform.position.x, 6f, gameObject.transform.position.z);
+	}
 }

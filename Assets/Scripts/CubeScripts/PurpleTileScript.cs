@@ -21,7 +21,8 @@ public class PurpleTileScript : MonoBehaviour {
 			minion.GetComponentInChildren<TurnPurpleScript>().turnPurple();
 
 						renderer.material.mainTexture = grass;
-						GetComponent<BoxCollider> ().enabled = false;
+			Vector3 size = new Vector3 (1f, 1f, 1f);
+			GetComponent<BoxCollider> ().size = size;
 				}
 	}
 	
@@ -30,4 +31,16 @@ public class PurpleTileScript : MonoBehaviour {
 			minion.GetComponent<MovementControl>().changeSpeed(2f);
 		}
 	}*/
-}
+
+	void OnMouseEnter() {
+		
+		CursorScript.pos = new Vector3(gameObject.transform.position.x, 6f, gameObject.transform.position.z);
+	}
+
+	void OnMouseDown() {
+				renderer.material.mainTexture = grass;
+				Vector3 size = new Vector3 (1f, 1f, 1f);
+				GetComponent<BoxCollider> ().size = size;
+		}
+		
+	}
