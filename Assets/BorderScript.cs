@@ -11,10 +11,10 @@ public class BorderScript : MonoBehaviour {
 		GameObject border;
 
 		for (int i = 0; i < 90; i ++) {
-						border = Instantiate (hillTile, new Vector3 (-9.5f + i, 1.701241f, 20.5f), Quaternion.identity) as GameObject;
+						border = Instantiate (hillTile, new Vector3 (-9.5f + i, 1f, 20.5f), Quaternion.identity) as GameObject;
 				}
 		for (int i = 0; i < 90; i ++) {
-			border = Instantiate (hillTile, new Vector3 (-9.5f + i, 1.701241f, -10.5f), Quaternion.identity) as GameObject;
+			border = Instantiate (hillTile, new Vector3 (-9.5f + i, 1f, -10.5f), Quaternion.identity) as GameObject;
 		}
 
 	
