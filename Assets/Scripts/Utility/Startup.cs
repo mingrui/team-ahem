@@ -5,7 +5,7 @@ public class Startup : MonoBehaviour {
 
 	void Start(){
 		Screen.showCursor = false;
-		Screen.lockCursor = true;
+		//Screen.lockCursor = true;
 	}
 
 	void Update() {
