@@ -14,7 +14,7 @@ public class TileMakeScript : MonoBehaviour {
 	float cornerX = 0;
 	float cornerZ = 0;
 	float timeCounter = 0;
-	Vector3 dirRight = new Vector3(1, 0, 0);
+	Vector3 dirRight = new Vector3 (1, 0, 0);
 	
 	// Use this for initialization
 	void Start () {
