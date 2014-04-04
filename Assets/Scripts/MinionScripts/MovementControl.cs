@@ -5,8 +5,17 @@ public class MovementControl : MonoBehaviour {
 
 	public int speed;
 	public GameObject direction_control;
-
+	//private GlobalConst.Direction minionDir;
 	private GameObject dir_menu;
+	public bool inWater = false;
+
+	/*public void resetSpeed(){
+	    rigidbody2D.velocity = rigidbody2D.velocity.normalized * speed;
+	}*/
+
+	public void changeSpeed(float scale){
+		rigidbody.velocity *= scale;
+	}
 
 	public void Move_Character(GlobalConst.Direction dir_enum){
 		/*rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
@@ -17,15 +26,23 @@ public class MovementControl : MonoBehaviour {
 			rigidbody.constraints = RigidbodyConstraints.FreezePositionX;
 		}
 		*/
+
+
 		rigidbody.velocity = moving_direction(dir_enum) * speed;
+
+
+		if (inWater == true) {
+			rigidbody.velocity *= 0.5f;
+				}
 	}
 
 	// start moving right
 	void Start () {
-		//rigidbody.velocity = moving_direction(GlobalConst.Direction.Right) * speed;
+
 	}
 
 	void Update () {
+
 	}
 
 	Vector3 moving_direction(GlobalConst.Direction _dir){
@@ -73,6 +90,8 @@ public class MovementControl : MonoBehaviour {
 
 	// click on this to command this to move in another direction is stopped
 	void OnMouseUp() {
+
+
 		if(rigidbody.velocity != new Vector3(0, 0, 0)){
 			return;
 		}
