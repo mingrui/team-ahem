@@ -67,6 +67,9 @@ public class MovementControl : MonoBehaviour {
 
 	// stop minion on collision with object
 	void OnCollisionEnter(Collision collision) {
+		if (rigidbody.velocity == new Vector3(0,0,0)) {
+			return;
+		}
 		Vector3 dir = collision.transform.position - transform.position;
 
 		if(dir.z > 0.5){
@@ -82,13 +85,17 @@ public class MovementControl : MonoBehaviour {
 			transform.position = new Vector3(collision.transform.position.x - 1, transform.position.y, collision.transform.position.z);
 		}
 		rigidbody.velocity *= 0;
+		rigidbody.isKinematic = true;
 	}
 
 	// click on this to command this to move in another direction is stopped
 	void OnMouseUp() {
+		rigidbody.isKinematic = false;
+		/*
 		if(rigidbody.velocity != new Vector3(0, 0, 0)){
 			return;
 		}
+		*/
 
 		if(dir_menu != null){
 			dir_menu.GetComponent<DirectionMenu>().center = gameObject;
