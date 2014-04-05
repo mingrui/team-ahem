@@ -1,6 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
 public class GlobalConst : MonoBehaviour {
 	
 	public enum MinionType {Melee, Range, Defensive};
@@ -41,4 +46,9 @@ public class GlobalConst : MonoBehaviour {
 		pos1.x = pos2.x;
 		pos1.z = pos2.z;
 	}
+}
+
+public class Constants
+{
+	public const float cMaxRayCastDistance = 1000.0f;
 }
