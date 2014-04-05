@@ -4,6 +4,12 @@ using System.Collections;
 public class WaterTileScript : MonoBehaviour {
 
 	public Texture grass;
+	public Texture grassLight;
+	
+	public Texture water;
+	public Texture waterLight;
+	
+	public bool waterGone = false;
 
 	// Use this for initialization
 	void Start () {
@@ -35,6 +41,24 @@ public class WaterTileScript : MonoBehaviour {
 		renderer.material.mainTexture = grass;
 		Vector3 size = new Vector3 (1f, 1f, 1f);
 		GetComponent<BoxCollider> ().size = size;
+		waterGone = true;
+	}
+
+	void OnMouseEnter() {
+		if (waterGone == false) {
+			renderer.material.mainTexture = waterLight;
+		} else {
+			renderer.material.mainTexture = grassLight;
+		}
+	}
+	
+	void OnMouseExit() {
+		if (waterGone == false) {
+			renderer.material.mainTexture = water;
+		}
+		else {
+			renderer.material.mainTexture = grass;
+		}
 	}
 
 }

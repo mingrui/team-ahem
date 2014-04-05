@@ -3,6 +3,17 @@ using System.Collections;
 
 public class MovementControl : MonoBehaviour {
 
+	public Texture purpleMinion;
+	public Texture purpleMinionSel;
+
+	public Texture yellowMinion;
+	public Texture yellowMinionSel;
+
+	public bool isPurple = false;
+
+
+
+
 	public int speed;
 	public GameObject direction_control;
 	//private GlobalConst.Direction minionDir;
@@ -88,5 +99,24 @@ public class MovementControl : MonoBehaviour {
 		dir_menu = dir_obj;
 		dir_obj.GetComponent<DirectionMenu>().center = gameObject;
 		dir_obj.transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
+	}
+
+
+
+	void OnMouseEnter() {
+		if (isPurple == false) {
+			GetComponentInChildren<TurnPurpleScript>().renderer.material.mainTexture = yellowMinionSel;
+		} else {
+			GetComponentInChildren<TurnPurpleScript>().renderer.material.mainTexture = purpleMinionSel;
+		}
+	}
+	
+	void OnMouseExit() {
+		if (isPurple == false) {
+			GetComponentInChildren<TurnPurpleScript>().renderer.material.mainTexture = yellowMinion;
+		}
+		else {
+			GetComponentInChildren<TurnPurpleScript>().renderer.material.mainTexture = purpleMinion;
+		}
 	}
 }

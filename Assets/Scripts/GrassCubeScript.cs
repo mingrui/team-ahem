@@ -3,6 +3,9 @@ using System.Collections;
 
 public class GrassCubeScript : MonoBehaviour {
 
+	public Texture grass;
+	public Texture grassLight;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -20,4 +23,13 @@ public class GrassCubeScript : MonoBehaviour {
 			GlobalConst.onMove = false;
 		}
 	}
+
+	void OnMouseEnter() {
+		renderer.material.mainTexture = grassLight;
+	}
+	
+	void OnMouseExit() {
+		renderer.material.mainTexture = grass;
+	}
+
 }
