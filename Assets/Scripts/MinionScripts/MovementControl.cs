@@ -67,9 +67,10 @@ public class MovementControl : MonoBehaviour {
 
 	// click on this to command this to move in another direction is stopped
 	void OnMouseDown() {
-        
+        Debug.Log("clicked");
         // can only click when not moving
         if(rigidbody.velocity != new Vector3(0, 0, 0)){
+            //Debug.Log("moving!");
             return;
         }
         
