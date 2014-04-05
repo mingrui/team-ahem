@@ -9,41 +9,18 @@ public class MovementControl : MonoBehaviour {
 	private GameObject dir_menu;
 	public bool inWater = false;
 
-	/*public void resetSpeed(){
-	    rigidbody2D.velocity = rigidbody2D.velocity.normalized * speed;
-	}*/
-
 	public void changeSpeed(float scale){
 		rigidbody.isKinematic = false;
 		rigidbody.velocity *= scale;
 	}
 
 	public void Move_Character(GlobalConst.Direction dir_enum){
-		/*rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
-		if(dir_enum == GlobalConst.Direction.Left || dir_enum == GlobalConst.Direction.Right){
-			rigidbody.constraints = RigidbodyConstraints.FreezePositionZ;
-		}
-		else{
-			rigidbody.constraints = RigidbodyConstraints.FreezePositionX;
-		}
-		*/
-
-
 		rigidbody.velocity = moving_direction(dir_enum) * speed;
 
 
 		if (inWater == true) {
 			rigidbody.velocity *= 0.5f;
 				}
-	}
-
-	// start moving right
-	void Start () {
-
-	}
-
-	void Update () {
-
 	}
 
 	Vector3 moving_direction(GlobalConst.Direction _dir){
@@ -89,13 +66,14 @@ public class MovementControl : MonoBehaviour {
 	}
 
 	// click on this to command this to move in another direction is stopped
-	void OnMouseUp() {
+	void OnMouseDown() {
+        
+        // can only click when not moving
+        if(rigidbody.velocity != new Vector3(0, 0, 0)){
+            return;
+        }
+        
 		rigidbody.isKinematic = false;
-		/*
-		if(rigidbody.velocity != new Vector3(0, 0, 0)){
-			return;
-		}
-		*/
 
 		if(dir_menu != null){
 			dir_menu.GetComponent<DirectionMenu>().center = gameObject;
@@ -109,11 +87,5 @@ public class MovementControl : MonoBehaviour {
 		dir_menu = dir_obj;
 		dir_obj.GetComponent<DirectionMenu>().center = gameObject;
 		dir_obj.transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
-	}
-
-
-	void OnMouseEnter() {
-		
-		CursorScript.pos = new Vector3(gameObject.transform.position.x, 6f, gameObject.transform.position.z);
 	}
 }

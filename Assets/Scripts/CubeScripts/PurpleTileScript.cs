@@ -25,17 +25,6 @@ public class PurpleTileScript : MonoBehaviour {
 			GetComponent<BoxCollider> ().size = size;
 				}
 	}
-	
-	/*void OnTriggerExit(Collider minion){
-		if (minion.tag == "Player") {
-			minion.GetComponent<MovementControl>().changeSpeed(2f);
-		}
-	}*/
-
-	void OnMouseEnter() {
-		
-		CursorScript.pos = new Vector3(gameObject.transform.position.x, 6f, gameObject.transform.position.z);
-	}
 
 	void OnMouseDown() {
 				renderer.material.mainTexture = grass;

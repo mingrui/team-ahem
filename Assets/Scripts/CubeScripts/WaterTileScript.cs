@@ -31,11 +31,6 @@ public class WaterTileScript : MonoBehaviour {
 		}
 	}
 
-	void OnMouseEnter() {
-		
-		CursorScript.pos = new Vector3(gameObject.transform.position.x, 6f, gameObject.transform.position.z);
-	}
-
 	void OnMouseDown() {
 		renderer.material.mainTexture = grass;
 		Vector3 size = new Vector3 (1f, 1f, 1f);
