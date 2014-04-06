@@ -14,7 +14,6 @@ public class MouseDownScript : MonoBehaviour {
 	}
 	
 	void OnMouseDown() {
-		CursorScript.pos.Set(gameObject.transform.position.x, CursorScript.pos.y, gameObject.transform.position.z);
 		if (GlobalConst.onMove) {
 			GlobalConst.selectedObj.transform.position = new Vector3(gameObject.transform.position.x, GlobalConst.selectedObj.transform.position.y, gameObject.transform.position.z);
 			//GlobalConst.Set_Position(GlobalConst.selectedObj.transform.position, transform.position);

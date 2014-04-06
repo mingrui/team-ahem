@@ -30,7 +30,6 @@ public class onClickScript : MonoBehaviour {
 
 	void OnMouseDown() {
 		//curPos = gameObject.transform.position;
-		CursorScript.pos = new Vector3(gameObject.transform.position.x, CursorScript.pos.y, gameObject.transform.position.z);
 		GlobalConst.selectedObj = gameObject;
 		GlobalConst.onMove = true;
 
