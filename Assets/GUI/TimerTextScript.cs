@@ -17,7 +17,7 @@ public class TimerTextScript : MonoBehaviour {
 			guiText.text = "Time Remaining: " + timeR.ToString ();
 		} else {
 			guiText.text = "Times Up ";
-			Time.timeScale = 0;
+			//Time.timeScale = 0;
 		}
 		
 	}
