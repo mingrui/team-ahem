@@ -20,6 +20,8 @@ public class DirectionButton : MonoBehaviour {
 		// check position relative to parent
 		Vector3 dir = transform.position - center.transform.position;
 
+		StopDetectionScript.minionStopCount --;
+
 		if(dir.z > 0.5){
 			//Debug.Log("up");
 			dir_enum = GlobalConst.Direction.Up;

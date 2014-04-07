@@ -60,6 +60,8 @@ public class MovementControl : MonoBehaviour {
 		}
 		Vector3 dir = collision.transform.position - transform.position;
 
+		StopDetectionScript.minionStopCount ++;
+
 		if(dir.z > 0.5){
 			transform.position = new Vector3(collision.transform.position.x, transform.position.y, collision.transform.position.z - 1);
 		}

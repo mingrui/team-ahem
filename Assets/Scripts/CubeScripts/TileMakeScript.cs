@@ -53,9 +53,9 @@ public class TileMakeScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
 		if (timeCounter > 1 && minionOnBoard < 30) {
-			
+
 			int spawnPosX = 0;
 			int spawnPosZ = Random.Range (0, 30);
 			GameObject new_minon = Instantiate (minion, new Vector3 (cornerX + spawnPosX, 2f, cornerZ + spawnPosZ), Quaternion.identity) as GameObject;
@@ -64,6 +64,8 @@ public class TileMakeScript : MonoBehaviour {
 			timeCounter = 0;
 			minionOnBoard++;
 		}
+
 		timeCounter += Time.deltaTime;
+
 	}
 }
