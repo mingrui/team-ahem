@@ -35,6 +35,7 @@ public class PlayAgainScript : MonoBehaviour {
 		StopDetectionScript.minionDead = 0;
 		StopDetectionScript.minionStopCount = 0;
 		StopDetectionScript.score = 1000;
+		MinionHomeScript.minionCount = 0;
 		TimerScript.timeRemaining = 240f;
 		TileMakeScript.maxMinions = 30;
 		Application.LoadLevel("Master_Scene_1");

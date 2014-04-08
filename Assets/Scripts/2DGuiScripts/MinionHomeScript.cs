@@ -19,7 +19,9 @@ public class MinionHomeScript : MonoBehaviour {
 	void OnTriggerEnter(Collider minion){
 		if (minion.tag == "Player") {
 			minionCount ++;
+			TileMakeScript.maxMinions++;
 			StopDetectionScript.score += 100;
+			Destroy (minion.gameObject);
 		}
 	}
 }

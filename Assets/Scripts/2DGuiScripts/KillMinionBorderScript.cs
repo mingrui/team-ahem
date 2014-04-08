@@ -16,10 +16,11 @@ public class KillMinionBorderScript : MonoBehaviour {
 
 	void OnTriggerEnter(Collider minion){
 		if (minion.tag == "Player") {
-			Destroy (minion.gameObject);
 			StopDetectionScript.minionDead ++;
 			TileMakeScript.maxMinions++;
 			StopDetectionScript.score -= 50;
+			Destroy (minion.gameObject);
+
 		}
 	}
 }
