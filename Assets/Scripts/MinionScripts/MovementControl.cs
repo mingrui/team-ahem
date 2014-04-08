@@ -74,6 +74,14 @@ public class MovementControl : MonoBehaviour {
 		else if(dir.x > 0.5){
 			transform.position = new Vector3(collision.transform.position.x - 1, transform.position.y, collision.transform.position.z);
 		}
+
+		if (isPurple == true && collision.collider.tag == "Player") {
+			Destroy (collision.collider.gameObject);
+			StopDetectionScript.minionDead++;
+			StopDetectionScript.minionStopCount--;
+			TileMakeScript.maxMinions++;
+				}
+
 		rigidbody.velocity *= 0;
 		rigidbody.isKinematic = true;
 	}

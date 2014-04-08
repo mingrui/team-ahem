@@ -11,7 +11,7 @@ public class GUIGuiHomeCountScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		guiText.text = "Minions Saved: " + MinionHomeScript.minionCount.ToString ();
+		guiText.text = "Minions Saved: " + MinionHomeScript.minionCount.ToString () + "/" + TileMakeScript.maxMinions.ToString();
 	
 	}
 }

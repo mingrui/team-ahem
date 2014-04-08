@@ -4,6 +4,7 @@ using System.Collections;
 public class StopDetectionScript : MonoBehaviour {
 
 	static public int minionStopCount = 0;
+	static public int minionDead = 0;
 
 	// Use this for initialization
 	void Start () {
