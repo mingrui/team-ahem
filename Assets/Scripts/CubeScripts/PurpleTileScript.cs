@@ -30,8 +30,9 @@ public class PurpleTileScript : MonoBehaviour {
 						renderer.material.mainTexture = grass;
 			Vector3 size = new Vector3 (1f, 1f, 1f);
 			GetComponent<BoxCollider> ().size = size;
+
 			bananaGone = true;
-			StopDetectionScript.score -= 10;
+
 				}
 	}
 
@@ -39,6 +40,9 @@ public class PurpleTileScript : MonoBehaviour {
 				renderer.material.mainTexture = grass;
 				Vector3 size = new Vector3 (1f, 1f, 1f);
 				GetComponent<BoxCollider> ().size = size;
+		if (bananaGone == false) {
+			StopDetectionScript.score -= 10;
+		}
 		bananaGone = true;
 		}
 

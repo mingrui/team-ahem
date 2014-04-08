@@ -41,8 +41,13 @@ public class WaterTileScript : MonoBehaviour {
 		renderer.material.mainTexture = grass;
 		Vector3 size = new Vector3 (1f, 1f, 1f);
 		GetComponent<BoxCollider> ().size = size;
+
+		if (waterGone == false) {
+			StopDetectionScript.score -= 10;
+		}
+
 		waterGone = true;
-		StopDetectionScript.score -= 10;
+
 	}
 
 	void OnMouseEnter() {

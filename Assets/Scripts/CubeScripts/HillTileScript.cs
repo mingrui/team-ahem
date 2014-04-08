@@ -15,8 +15,10 @@ public class HillTileScript : MonoBehaviour {
 		renderer.material.mainTexture = grass;
 		Vector3 size = new Vector3 (1f, 1f, 1f);
 		GetComponent<Transform> ().localScale = size;
+		if (hillGone == false) {
+						StopDetectionScript.score -= 10;
+				}
 		hillGone = true;
-		StopDetectionScript.score -= 10;
 	}
 
 
