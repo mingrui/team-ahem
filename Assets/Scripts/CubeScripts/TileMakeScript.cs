@@ -10,6 +10,7 @@ public class TileMakeScript : MonoBehaviour {
 	public GameObject minion;
 	public GameObject[,] tileArray = new GameObject[90,30];
 	public int minionOnBoard = 0;
+	public static int maxMinions = 30;
 	float cornerX = 0;
 	float cornerZ = 0;
 	float timeCounter = 0;
@@ -54,7 +55,7 @@ public class TileMakeScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (timeCounter > 1 && minionOnBoard < 30) {
+		if (timeCounter > 1 && minionOnBoard < maxMinions) {
 
 			int spawnPosX = 0;
 			int spawnPosZ = Random.Range (0, 30);
