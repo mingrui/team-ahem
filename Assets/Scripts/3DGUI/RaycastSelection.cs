@@ -6,6 +6,7 @@ public class RaycastSelection : MonoBehaviour {
 	// selected GameObject
 	private GameObject mSelectedObject;
 	private LineRenderer lineOne;
+    public Material lineOne_material;
 
 	// Use this for initialization
 	void Start () {
@@ -80,6 +81,6 @@ public class RaycastSelection : MonoBehaviour {
 		lineOne.SetPosition(0, transform.position);
 		lineOne.SetPosition(1, hitOne.point);
 		Material whiteDiffuseMat = new Material(Shader.Find("Unlit/Texture"));
-		lineOne.material = whiteDiffuseMat;
+		lineOne.material = lineOne_material;
 	}
 }
