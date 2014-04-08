@@ -31,6 +31,7 @@ public class PurpleTileScript : MonoBehaviour {
 			Vector3 size = new Vector3 (1f, 1f, 1f);
 			GetComponent<BoxCollider> ().size = size;
 			bananaGone = true;
+			StopDetectionScript.score -= 10;
 				}
 	}
 

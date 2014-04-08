@@ -80,6 +80,7 @@ public class MovementControl : MonoBehaviour {
 			StopDetectionScript.minionDead++;
 			StopDetectionScript.minionStopCount--;
 			TileMakeScript.maxMinions++;
+			StopDetectionScript.score -= 50;
 				}
 
 		rigidbody.velocity *= 0;

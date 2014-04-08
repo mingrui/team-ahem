@@ -19,6 +19,7 @@ public class KillMinionBorderScript : MonoBehaviour {
 			Destroy (minion.gameObject);
 			StopDetectionScript.minionDead ++;
 			TileMakeScript.maxMinions++;
+			StopDetectionScript.score -= 50;
 		}
 	}
 }

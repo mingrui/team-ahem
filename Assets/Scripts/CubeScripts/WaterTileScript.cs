@@ -42,6 +42,7 @@ public class WaterTileScript : MonoBehaviour {
 		Vector3 size = new Vector3 (1f, 1f, 1f);
 		GetComponent<BoxCollider> ().size = size;
 		waterGone = true;
+		StopDetectionScript.score -= 10;
 	}
 
 	void OnMouseEnter() {

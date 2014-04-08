@@ -16,6 +16,7 @@ public class HillTileScript : MonoBehaviour {
 		Vector3 size = new Vector3 (1f, 1f, 1f);
 		GetComponent<Transform> ().localScale = size;
 		hillGone = true;
+		StopDetectionScript.score -= 10;
 	}
 
 

@@ -19,6 +19,7 @@ public class MinionHomeScript : MonoBehaviour {
 	void OnTriggerEnter(Collider minion){
 		if (minion.tag == "Player") {
 			minionCount ++;
+			StopDetectionScript.score += 100;
 		}
 	}
 }

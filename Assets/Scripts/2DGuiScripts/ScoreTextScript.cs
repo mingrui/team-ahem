@@ -1,11 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class StopDetectionScript : MonoBehaviour {
-
-	static public int minionStopCount = 0;
-	static public int minionDead = 0;
-	static public int score = 1000;
+public class ScoreTextScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -15,6 +11,7 @@ public class StopDetectionScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		guiText.text = "Score: " + StopDetectionScript.score.ToString ();
 	
 	}
 }
