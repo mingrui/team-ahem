@@ -17,7 +17,7 @@ public class MovementControl : MonoBehaviour {
 	public int speed;
 	public GameObject direction_control;
 	//private GlobalConst.Direction minionDir;
-	private GameObject dir_menu;
+	private static GameObject dir_menu;
 	public bool inWater = false;
 
 	public void changeSpeed(float scale){
@@ -89,27 +89,37 @@ public class MovementControl : MonoBehaviour {
 
 	// click on this to command this to move in another direction is stopped
 	void OnMouseDown() {
-        //Debug.Log("clicked");
         // can only click when not moving
         if(rigidbody.velocity != new Vector3(0, 0, 0)){
-            //Debug.Log("moving!");
             return;
         }
         
 		rigidbody.isKinematic = false;
 
+
 		if(dir_menu != null){
-			dir_menu.GetComponent<DirectionMenu>().center = gameObject;
+			// if clicked on the same thing twice, menu should disappear
+			if(dir_menu.GetComponent<DirectionMenu>().Same_Center(gameObject)){
+				// if both false, true
+				// if activeSelft true, false
+				dir_menu.SetActive(!(false || dir_menu.activeSelf));
+				return;
+			}
+
+			dir_menu.GetComponent<DirectionMenu>().Change_Menu_Center(gameObject);
 			dir_menu.transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
 			dir_menu.SetActive(true);
 			return;
 		}
-
-		// instantiate a menu, should be Singleton
-		GameObject dir_obj =  (GameObject)Instantiate(direction_control);
-		dir_menu = dir_obj;
-		dir_obj.GetComponent<DirectionMenu>().center = gameObject;
-		dir_obj.transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
+		else {	
+			// instantiate a menu, should be Singleton
+			GameObject dir_obj =  (GameObject)Instantiate(direction_control);
+			dir_menu = dir_obj;
+			dir_menu.GetComponent<DirectionMenu>().Find_Buttons();
+			dir_menu.GetComponent<DirectionMenu>().Change_Menu_Center(gameObject);
+			dir_menu.transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
+			dir_menu.SetActive(true);
+		}
 	}
 
 
