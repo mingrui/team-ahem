@@ -45,5 +45,19 @@ public class CameramanMovement : MonoBehaviour {
             transform.position = movement;
 
         }
+
+		if (Input.GetKey(KeyCode.Z))
+		{
+			movement.y = transform.position.y + 0.3f;
+			transform.position = movement;
+			
+		}
+
+		if (Input.GetKey(KeyCode.X))
+		{
+			movement.y = transform.position.y - 0.3f;
+			transform.position = movement;
+			
+		}
     }
 }

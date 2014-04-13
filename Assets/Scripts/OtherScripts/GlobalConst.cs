@@ -46,6 +46,8 @@ public class GlobalConst : MonoBehaviour {
 		pos1.x = pos2.x;
 		pos1.z = pos2.z;
 	}
+
+	public static KeyCode camera_switch_key = KeyCode.Alpha1;
 }
 
 public class Constants
