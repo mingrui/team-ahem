@@ -88,7 +88,7 @@ public class MovementControl : MonoBehaviour {
 	}
 
 	// click on this to command this to move in another direction is stopped
-	void OnMouseDown() {
+	void OnMouseUp() {
         // can only click when not moving
         if(rigidbody.velocity != new Vector3(0, 0, 0)){
             return;
@@ -98,17 +98,22 @@ public class MovementControl : MonoBehaviour {
 
 
 		if(dir_menu != null){
-			// if clicked on the same thing twice, menu should disappear
 			if(dir_menu.GetComponent<DirectionMenu>().Same_Center(gameObject)){
 				// if both false, true
-				// if activeSelft true, false
-				dir_menu.SetActive(!(false || dir_menu.activeSelf));
-				return;
+				// if activeSelf true, false
+				if(dir_menu.activeSelf){
+					dir_menu.SetActive(false);
+				}
+				else {
+					dir_menu.SetActive(true);
+				}
 			}
-
+			else {
+				dir_menu.SetActive(true);
+			}
 			dir_menu.GetComponent<DirectionMenu>().Change_Menu_Center(gameObject);
 			dir_menu.transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
-			dir_menu.SetActive(true);
+			// if clicked on the same thing twice, menu should disappear
 			return;
 		}
 		else {	
