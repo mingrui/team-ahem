@@ -3,7 +3,8 @@ using System.Collections;
 
 public class TimerScript : MonoBehaviour {
 
-	public static float timeRemaining = 240f;
+	//public static float timeRemaining = 240f;
+	public static float timeRemaining = 120f;
 
 	// Use this for initialization
 	void Start () {
