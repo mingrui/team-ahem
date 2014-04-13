@@ -11,7 +11,8 @@ public class MovementControl : MonoBehaviour {
 
 	public bool isPurple = false;
 
-
+	private Vector3 v3Pos;
+	private int threshold = 9;
 
 
 	public int speed;
@@ -95,7 +96,7 @@ public class MovementControl : MonoBehaviour {
         }
         
 		rigidbody.isKinematic = false;
-
+		Debug.Log(" Clicking ...");
 
 		if(dir_menu != null){
 			if(dir_menu.GetComponent<DirectionMenu>().Same_Center(gameObject)){
@@ -125,6 +126,51 @@ public class MovementControl : MonoBehaviour {
 			dir_menu.transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
 			dir_menu.SetActive(true);
 		}
+	}
+
+	void OnMouseDown() {
+		v3Pos = Input.mousePosition;
+	}
+	void OnMouseDrag() {
+
+		if(rigidbody.velocity != new Vector3(0, 0, 0)){
+			return;
+		}
+		
+		rigidbody.isKinematic = false;
+
+		var v3 = Input.mousePosition - v3Pos;
+		GlobalConst.Direction dir_enum;
+		v3.Normalize();
+		var f = Vector3.Dot(v3, Vector3.up);
+		if (Vector3.Distance(v3Pos, Input.mousePosition) < threshold) {
+			//Debug.Log("No movement");
+			return;
+		}
+		
+		if (f >= 0.5) {
+			Debug.Log("Up");
+			dir_enum = GlobalConst.Direction.Up;
+		}
+		else if (f <= -0.5) {
+			Debug.Log("Down");
+			dir_enum = GlobalConst.Direction.Down;
+		}
+		else {
+			f = Vector3.Dot(v3, Vector3.right);
+			if (f >= 0.5) {
+				Debug.Log("Right");
+				dir_enum = GlobalConst.Direction.Right;
+			}
+			else {
+				Debug.Log("Left");
+				dir_enum = GlobalConst.Direction.Left;
+			}
+		}
+		if (dir_menu != null) {
+			dir_menu.SetActive(false);
+		}
+		Move_Character (dir_enum);
 	}
 
 
