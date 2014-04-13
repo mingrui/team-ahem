@@ -98,6 +98,14 @@ public class MovementControl : MonoBehaviour {
 
 
 		if(dir_menu != null){
+			// if clicked on the same thing twice, menu should disappear
+			if(dir_menu.GetComponent<DirectionMenu>().Same_Center(gameObject)){
+				// if both false, true
+				// if activeSelft true, false
+				dir_menu.SetActive(!(false || dir_menu.activeSelf));
+				return;
+			}
+
 			dir_menu.GetComponent<DirectionMenu>().Change_Menu_Center(gameObject);
 			dir_menu.transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
 			dir_menu.SetActive(true);
