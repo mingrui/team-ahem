@@ -16,6 +16,10 @@ public class DirectionButton : MonoBehaviour {
 	
 	}
 
+	public void Change_Center(GameObject _center){
+		center = _center;
+	}
+
 	void OnMouseUp() {
 		// check position relative to parent
 		Vector3 dir = transform.position - center.transform.position;
